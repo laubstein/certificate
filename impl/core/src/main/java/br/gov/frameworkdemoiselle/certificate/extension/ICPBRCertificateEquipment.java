@@ -63,26 +63,26 @@ public class ICPBRCertificateEquipment {
 	/**
 	 * 
 	 * @param oid1
-	 *            -> 2.16.76.1.3.2 e conteudo = nome do responsavel pelo
+	 *            -> 2.16.76.1.3.2 e conteúdo = nome do responsável pelo
 	 *            certificado
 	 * 
 	 * @param oid2
-	 *            -> 2.16.76.1.3.3 e conteudo = Cadastro Nacional de Pessoa
+	 *            -> 2.16.76.1.3.3 e conteúdo = Cadastro Nacional de Pessoa
 	 *            Juridica (CNPJ), se o certificado for de pessoa juridica
 	 * 
 	 * @param oid3
-	 *            -> 2.16.76.1.3.4 e conteudo = nas primeiras 8 (oito) posicoes,
-	 *            a data de nascimento do responsavel pelo certificado, no
-	 *            formato ddmmaaaa; nas 11 (onze) posicoes subsequentes, o
-	 *            Cadastro de Pessoa Fisica (CPF) do responsavel; nas 11 (onze)
-	 *            posicoes subsequentes, o numero de Identificacao Social - NIS
-	 *            (PIS, PASEP ou CI); nas 15 (quinze) posicoes subsequentes, o
-	 *            numero do RG do responsavel; nas 6 (seis) posicoes
+	 *            -> 2.16.76.1.3.4 e conteúdo = nas primeiras 8 (oito) posições,
+	 *            a data de nascimento do responsável pelo certificado, no
+	 *            formato ddmmaaaa; nas 11 (onze) posições subsequentes, o
+	 *            Cadastro de Pessoa Fisica (CPF) do responsável; nas 11 (onze)
+	 *            posições subsequentes, o número de Identificacao Social - NIS
+	 *            (PIS, PASEP ou CI); nas 15 (quinze) posições subsequentes, o
+	 *            número do RG do responsável; nas 6 (seis) posições
 	 *            subsequentes, as siglas do orgao expedidor do RG e respectiva
 	 *            UF
 	 * 
 	 * @param oid4
-	 *            -> 2.16.76.1.3.8 e conteudo = nome empresarial constante do
+	 *            -> 2.16.76.1.3.8 e conteúdo = nome empresarial constante do
 	 *            CNPJ (Cadastro Nacional de Pessoa Juridica), sem abreviacoes,
 	 *            se o certificado for de pessoa juridica
 	 * 
@@ -96,7 +96,7 @@ public class ICPBRCertificateEquipment {
 
 	/**
 	 * 
-	 * @return string com o nome do responsavel pelo certificado
+	 * @return string com o nome do responsável pelo certificado
 	 */
 	public String getNomeResponsavel() {
 		return oID_2_16_76_1_3_2.getNome();
@@ -113,7 +113,7 @@ public class ICPBRCertificateEquipment {
 
 	/**
 	 * 
-	 * @return numero do CNPJ (Cadastro Nacional de Pessoa Juridica)
+	 * @return número do CNPJ (Cadastro Nacional de Pessoa Juridica)
 	 */
 	public String getCNPJ() {
 		return oID_2_16_76_1_3_3.getCNPJ();
@@ -121,7 +121,7 @@ public class ICPBRCertificateEquipment {
 
 	/**
 	 * 
-	 * @return data de nascimento do responsavel pelo certificado, no formato
+	 * @return data de nascimento do responsável pelo certificado, no formato
 	 *         Date
 	 */
 	public Date getDataNascimento() {
@@ -136,7 +136,7 @@ public class ICPBRCertificateEquipment {
 
 	/**
 	 * 
-	 * @return o numero de Identificacao Social - NIS (PIS, PASEP ou CI)
+	 * @return o número de Identificacao Social - NIS (PIS, PASEP ou CI)
 	 */
 	public String getNis() {
 		return oID_2_16_76_1_3_4.getNIS();
@@ -144,7 +144,7 @@ public class ICPBRCertificateEquipment {
 
 	/**
 	 * 
-	 * @return o numero do RG do responsavel
+	 * @return o número do RG do responsável
 	 */
 	public String getRg() {
 		return oID_2_16_76_1_3_4.getRg();

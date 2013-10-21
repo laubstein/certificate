@@ -41,7 +41,7 @@ package br.gov.frameworkdemoiselle.certificate.signer.factory;
 import br.gov.frameworkdemoiselle.certificate.signer.SignerException;
 
 /**
- * Fabrica abstrata que concentra a leitura das configurações para as fábricas
+ * Fábrica abstrata que concentra a leitura das configurações para as fábricas
  * especializadas como também as funcionalidades de reflexão de classes.
  * 
  * @see {@link PKCS1Factory}, {@link PKCS7Factory}
@@ -52,12 +52,12 @@ abstract public class GenericFactory<F> {
 	private String className = null;
 
 	/**
-	 * Principal método da fábrica. Este metodo fabrica classes a partir de nome
-	 * de classes definidos em variaveis de ambiente. Tais variaveis são
+	 * Principal método da fábrica. Este método fabrica classes a partir de nome
+	 * de classes definidos em variáveis de ambiente. Tais variáveis são
 	 * definidas por cada fábrica concreta que implementar a fábrica abstrata
 	 * através do método getVariableName(). Uma vez lido a variável de ambiente,
-	 * o valor da variavel é armazenada na propriedade "className". Caso a
-	 * variável de ambiente não esteja setada, um objeto padrão é construido
+	 * o valor da variável é armazenada na propriedade "className". Caso a
+	 * variável de ambiente não esteja setada, um objeto padrão é construído
 	 * através do método abstrato factoryDefault().
 	 */
 	public F factory() {
@@ -101,13 +101,13 @@ abstract public class GenericFactory<F> {
 	}
 
 	/**
-	 * Busca nas variaveis de ambiente ou em variavel da JVM um determinado
-	 * valor. Prioridade para as variaveis de ambiente.
+	 * Busca nas variáveis de ambiente ou em variável da JVM um determinado
+	 * valor. Prioridade para as variáveis de ambiente.
 	 * 
 	 * @param key
-	 *            Chave de localizacao da variavel
-	 * @return O conteudo definida em uma das variaveis. NULL se nenhuma
-	 *         variavel for definida
+	 *            Chave de localizacao da variável
+	 * @return O conteúdo definida em uma das variáveis. NULL se nenhuma
+	 *         variável for definida
 	 */
 	private String getContentFromVariables(String key) {
 		String content = System.getenv(key);
@@ -132,7 +132,7 @@ abstract public class GenericFactory<F> {
 	public abstract F factoryDefault();
 
 	/**
-	 * Toda fábrica concreta precisa definir em qual variavel de ambiente contém
+	 * Toda fábrica concreta precisa definir em qual variável de ambiente contém
 	 * o nome da classe a ser fabricada
 	 */
 	protected abstract String getVariableName();

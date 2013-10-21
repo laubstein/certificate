@@ -164,7 +164,7 @@ public class OIDGeneric {
     }
 
     protected void initialize() {
-        // Inicializa as propriedades do conteudo DATA
+        // Inicializa as propriedades do conteúdo DATA
     }
 
     /**

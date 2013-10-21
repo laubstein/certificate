@@ -61,7 +61,7 @@ public class FileSystemKeyStoreLoader implements KeyStoreLoader {
 	private File fileKeyStore = null;
 
 	/**
-	 * Construtor da classe Verifique se o parametro informado existe e se é
+	 * Construtor da classe Verifique se o parâmetro informado existe e se é
 	 * arquivo.
 	 * 
 	 * @param file

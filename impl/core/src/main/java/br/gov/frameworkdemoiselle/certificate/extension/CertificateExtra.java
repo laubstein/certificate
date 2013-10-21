@@ -185,7 +185,7 @@ public class CertificateExtra {
 	 * Class OID 2.16.76.1.3.2 <br>
 	 * <br>
 	 * Has some "ICP-BRASIL Pessoa Juridica and Equipment" attributes<br>
-	 * <b>*</b> Nome do responsavel pelo certificado <br>
+	 * <b>*</b> Nome do responsável pelo certificado <br>
 	 * 
 	 * @return OID_2_16_76_1_3_2
 	 */

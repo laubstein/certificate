@@ -78,7 +78,7 @@ public class MSKeyStoreLoader implements KeyStoreLoader {
 	}
 
 	/**
-	 * Implementacao do metodo de contorno para evitar a duplicidade de
+	 * Implementacao do método de contorno para evitar a duplicidade de
 	 * certificados, conforme descrito em
 	 * <http://bugs.sun.com/bugdatabase/view_bug.do?bug_id=6672015>
 	 * 

@@ -130,14 +130,14 @@ public class ValidadorUtil {
         } catch (Throwable error) {
             error.printStackTrace();
             if (error.getCause() instanceof CertificateExpiredException) {
-                throw new SignerException("O certificado de uma das cadeias está expirado", error);
+                throw new SignerException(Messages.getString("erro.certificadoCadeiaExpirado"), error);
             }
 
             try {
                 CAManager.getInstance().validateRootCAs(trustedCas, userCertificate);
             } catch (Throwable managerError) {
                 managerError.printStackTrace();
-                throw new SignerException("Este certificado nao esta associado a uma cadeia confiavel de ACs", error);
+                throw new SignerException(Messages.getString("erro.certificadoNaoAssociadoCadeiaConfiavel"), error);
             }
         }
     }
@@ -169,16 +169,16 @@ public class ValidadorUtil {
             String identificador = objectIdentifier.toString();
 
             if (!(identificador.startsWith("2.16.76.1.2.1.") || identificador.startsWith("2.16.76.1.2.2.") || identificador.startsWith("2.16.76.1.2.3.") || identificador.startsWith("2.16.76.1.2.4."))) {
-                throw new SignerException("O OID não corresponde a uma Política de Certificado.");
+                throw new SignerException(Messages.getString("erro.OIDNaoCorrespondePolitica"));
             }
 
             int sufixo = Integer.parseInt(identificador.substring(identificador.lastIndexOf(".") + 1));
             if (sufixo < 1 || sufixo > 100) {
-                throw new SignerException("O certificado deve ser do tipo A1, A2, A3 ou A4.");
+                throw new SignerException(Messages.getString("erro.certificadoDeveSerA1A2A3A4"));
             }
 
         } catch (Throwable error) {
-            throw new SignerException("A assinaturas digital deve ser criada com chave privada associada ao certificado ICP-Brasil tipo A1, A2, A3 ou A4", error);
+            throw new SignerException(Messages.getString("erro.assinaturaDigitalDeveSerCriadaChaveA1A2A3A4"), error);
         }
     }
 }

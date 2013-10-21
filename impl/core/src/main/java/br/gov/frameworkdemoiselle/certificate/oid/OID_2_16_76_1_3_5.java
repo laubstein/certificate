@@ -66,7 +66,7 @@ public class OID_2_16_76_1_3_5 extends OIDGeneric {
 
 	/**
 	 * 
-	 * @return String de 12 posicoes com o numero do Titulo de eleitor
+	 * @return String de 12 posições com o número do Titulo de eleitor
 	 */
 	public String getTitulo() {
 		return properties.get("titulo");
@@ -74,7 +74,7 @@ public class OID_2_16_76_1_3_5 extends OIDGeneric {
 
 	/**
 	 * 
-	 * @return String de 3 posicoes com o numero da zona eleitoral
+	 * @return String de 3 posições com o número da zona eleitoral
 	 */
 	public String getZona() {
 		return properties.get("zona");
@@ -82,7 +82,7 @@ public class OID_2_16_76_1_3_5 extends OIDGeneric {
 
 	/**
 	 * 
-	 * @return String de 4 posicoes com o numero da secao eleitoral
+	 * @return String de 4 posições com o número da secao eleitoral
 	 */
 	public String getSecao() {
 		return properties.get("secao");

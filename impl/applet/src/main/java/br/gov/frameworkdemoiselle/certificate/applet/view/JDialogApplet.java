@@ -98,7 +98,11 @@ public class JDialogApplet extends JApplet {
 		keyStoreDialog.addButtonCancelActionListener(new ActionListener() {
 			@Override
 			public void actionPerformed(ActionEvent e) {
-				cancelButton_actionPerformed();
+				try {
+					cancelButton_actionPerformed();
+				} catch (Exception e1) {
+					e1.printStackTrace();
+				}
 			}
 		});
 
@@ -191,8 +195,9 @@ public class JDialogApplet extends JApplet {
 
 	/**
 	 * Chamado ao clique do botao Cancelar
+	 * @throws Exception 
 	 */
-	private void cancelButton_actionPerformed() {
+	private void cancelButton_actionPerformed() throws Exception {
 
 		KeyStore keystore = keyStoreDialog.getKeyStore();
 		String alias = keyStoreDialog.getAlias();

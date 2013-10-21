@@ -38,7 +38,7 @@
 package br.gov.frameworkdemoiselle.certificate.repository;
 
 /**
- * Entidade responsavel por guardar as configuracoes necessarias ao uso do
+ * Entidade responsável por guardar as configuracoes necessarias ao uso do
  * repositorio
  */
 public class Configuration {
@@ -65,7 +65,7 @@ public class Configuration {
 	public static Configuration instance = new Configuration();
 
 	/**
-	 * Verifica se há variavéis no System. Caso haja, seta nas variaveis de
+	 * Verifica se há variavéis no System. Caso haja, seta nas variáveis de
 	 * classes do contrário usa os valores padrões
 	 */
 	private Configuration() {

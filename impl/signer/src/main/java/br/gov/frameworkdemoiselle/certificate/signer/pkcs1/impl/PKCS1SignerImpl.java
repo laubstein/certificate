@@ -48,6 +48,7 @@ import java.security.SignatureException;
 import br.gov.frameworkdemoiselle.certificate.signer.SignerAlgorithmEnum;
 import br.gov.frameworkdemoiselle.certificate.signer.SignerException;
 import br.gov.frameworkdemoiselle.certificate.signer.pkcs1.PKCS1Signer;
+import br.gov.frameworkdemoiselle.certificate.signer.util.Messages;
 
 public class PKCS1SignerImpl implements PKCS1Signer {
 
@@ -68,9 +69,9 @@ public class PKCS1SignerImpl implements PKCS1Signer {
 	@Override
 	public byte[] signer(byte[] content) {
 		if (content == null)
-			throw new SignerException("Content is null");
+			throw new SignerException(Messages.getString("error.contentIsNull")); 
 		if (this.privateKey == null)
-			throw new SignerException("Private Key is null");
+			throw new SignerException(Messages.getString("error.privateKeyIsNull")); 
 		if (this.algorithm == null) {
 			this.algorithm = SignerAlgorithmEnum.DEFAULT.getAlgorithm();
 		}
@@ -89,11 +90,11 @@ public class PKCS1SignerImpl implements PKCS1Signer {
 			result = sign.sign();
 
 		} catch (NoSuchAlgorithmException exception) {
-			throw new SignerException("Error on load algorithm " + algorithm, exception);
+			throw new SignerException(Messages.getString("error.errorOnLoadAlgorithm", algorithm), exception); 
 		} catch (InvalidKeyException exception) {
-			throw new SignerException("Invalid key", exception);
+			throw new SignerException(Messages.getString("error.invalidKey"), exception); 
 		} catch (SignatureException exception) {
-			throw new SignerException("Signature error", exception);
+			throw new SignerException(Messages.getString("error.signatureError"), exception); 
 		}
 		return result;
 	}
@@ -114,11 +115,11 @@ public class PKCS1SignerImpl implements PKCS1Signer {
 	@Override
 	public boolean check(byte[] content, byte[] signed) {
 		if (content == null)
-			throw new SignerException("Content is null");
+			throw new SignerException(Messages.getString("error.contentIsNull")); 
 		if (signed == null)
-			throw new SignerException("Signed Content is null");
+			throw new SignerException(Messages.getString("error.signedContentIsNull")); 
 		if (this.publicKey == null)
-			throw new SignerException("Public Key is null");
+			throw new SignerException(Messages.getString("error.publicKeyIsNull")); 
 		if (this.algorithm == null) {
 			this.algorithm = SignerAlgorithmEnum.DEFAULT.getAlgorithm();
 		}
@@ -138,11 +139,11 @@ public class PKCS1SignerImpl implements PKCS1Signer {
 			result = signature.verify(signed);
 
 		} catch (NoSuchAlgorithmException exception) {
-			throw new SignerException("Error on load algorithm " + this.algorithm, exception);
+			throw new SignerException(Messages.getString("error.errorOnLoadAlgorithm", this.algorithm), exception); 
 		} catch (InvalidKeyException exception) {
-			throw new SignerException("Invalid key", exception);
+			throw new SignerException(Messages.getString("error.invalidKey"), exception); 
 		} catch (SignatureException exception) {
-			throw new SignerException("Signature error", exception);
+			throw new SignerException(Messages.getString("error.signatureError"), exception); 
 		}
 
 		return result;

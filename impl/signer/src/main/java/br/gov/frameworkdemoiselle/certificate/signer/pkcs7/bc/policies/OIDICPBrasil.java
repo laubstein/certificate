@@ -43,235 +43,235 @@ public interface OIDICPBrasil {
 
 	// O nome desta Política de Assinatura para a versão 1.0 é POLITICA
 	// ICP-BRASIL PARA ASSINATURA DIGITAL COM REFERENCIA BASICA NO FORMATO CMS,
-	// versao 1.0 e o seu Object Identifier (OID) é 2.16.76.1.7.1.1.1.
+	// versão 1.0 e o seu Object Identifier (OID) é 2.16.76.1.7.1.1.1.
 	public static final String POLICY_ID_AD_RB_CMS_V_1_0 = OIDICPBrasil.PREFIX_POLICE_ID + "1.1";
 
 	// O nome desta Política de Assinatura para a versão 1.1 é POLITICA
 	// ICP-BRASIL PARA ASSINATURA DIGITAL COM REFERENCIA BASICA NO FORMATO CMS,
-	// versao 1.1 e o seu Object Identifier (OID) é 2.16.76.1.7.1.1.1.1.
+	// versão 1.1 e o seu Object Identifier (OID) é 2.16.76.1.7.1.1.1.1.
 	public static final String POLICY_ID_AD_RB_CMS_V_1_1 = OIDICPBrasil.PREFIX_POLICE_ID + "1.1.1";
 
 	// O nome desta Política de Assinatura para a versão 2.0 é POLITICA
 	// ICP-BRASIL PARA ASSINATURA DIGITAL COM REFERENCIA BASICA NO FORMATO CMS,
-	// versao 2.0 e o seu Object Identifier (OID) é 2.16.76.1.7.1.1.2.
+	// versão 2.0 e o seu Object Identifier (OID) é 2.16.76.1.7.1.1.2.
 	public static final String POLICY_ID_AD_RB_CMS_V_2_0 = OIDICPBrasil.PREFIX_POLICE_ID + "1.2";
 
 	// O nome desta Política de Assinatura para a versão 2.1 é POLITICA
 	// ICP-BRASIL PARA ASSINATURA DIGITAL COM REFERENCIA BASICA NO FORMATO CMS,
-	// versao 2.1 e o seu Object Identifier (OID) é 2.16.76.1.7.1.1.2.1.
+	// versão 2.1 e o seu Object Identifier (OID) é 2.16.76.1.7.1.1.2.1.
 	public static final String POLICY_ID_AD_RB_CMS_V_2_1 = OIDICPBrasil.PREFIX_POLICE_ID + "1.2.1";
 
 	// O nome desta Política de Assinatura para a versão 1.0 é POLITICA
 	// ICP-BRASIL PARA ASSINATURA DIGITAL COM REFERENCIA DO TEMPO NO FORMATO
 	// CMS,
-	// versao 1.0 e o seu Object Identifier (OID) é 2.16.76.1.7.1.2.1.
+	// versão 1.0 e o seu Object Identifier (OID) é 2.16.76.1.7.1.2.1.
 	public static final String POLICY_ID_AD_RT_CMS_V_1_0 = OIDICPBrasil.PREFIX_POLICE_ID + "2.1";
 
 	// O nome desta Política de Assinatura para a versão 1.1 é POLITICA
 	// ICP-BRASIL PARA ASSINATURA DIGITAL COM REFERENCIA DO TEMPO NO FORMATO
 	// CMS,
-	// versao 1.1 e o seu Object Identifier (OID) é 2.16.76.1.7.1.2.1.1.
+	// versão 1.1 e o seu Object Identifier (OID) é 2.16.76.1.7.1.2.1.1.
 	public static final String POLICY_ID_AD_RT_CMS_V_1_1 = OIDICPBrasil.PREFIX_POLICE_ID + "2.1.1";
 
 	// O nome desta Política de Assinatura para a versão 2.0 é POLITICA
 	// ICP-BRASIL PARA ASSINATURA DIGITAL COM REFERENCIA DO TEMPO NO FORMATO
 	// CMS,
-	// versao 2.0 e o seu Object Identifier (OID) é 2.16.76.1.7.1.2.2.
+	// versão 2.0 e o seu Object Identifier (OID) é 2.16.76.1.7.1.2.2.
 	public static final String POLICY_ID_AD_RT_CMS_V_2_0 = OIDICPBrasil.PREFIX_POLICE_ID + "2.2";
 
 	// O nome desta Política de Assinatura para a versão 2.1 é POLITICA
 	// ICP-BRASIL PARA ASSINATURA DIGITAL COM REFERENCIA DO TEMPO NO FORMATO
 	// CMS,
-	// versao 2.1 e o seu Object Identifier (OID) é 2.16.76.1.7.1.2.2.1.
+	// versão 2.1 e o seu Object Identifier (OID) é 2.16.76.1.7.1.2.2.1.
 	public static final String POLICY_ID_AD_RT_CMS_V_2_1 = OIDICPBrasil.PREFIX_POLICE_ID + "2.2.1";
 
 	// O nome desta Política de Assinatura para a versão 1.0 é POLITICA
 	// ICP-BRASIL PARA ASSINATURA DIGITAL COM REFERENCIAS PARA VALIDACAO NO
 	// FORMATO
-	// CMS, versao 1.0 e o seu Object Identifier (OID) é 2.16.76.1.7.1.3.1.
+	// CMS, versão 1.0 e o seu Object Identifier (OID) é 2.16.76.1.7.1.3.1.
 	public static final String POLICY_ID_AD_RV_CMS_V_1_0 = OIDICPBrasil.PREFIX_POLICE_ID + "3.1";
 
 	// O nome desta Política de Assinatura para a versão 1.1 é POLITICA
 	// ICP-BRASIL PARA ASSINATURA DIGITAL COM REFERENCIAS PARA VALIDACAO NO
 	// FORMATO
-	// CMS, versao 1.1 e o seu Object Identifier (OID) é 2.16.76.1.7.1.3.1.1.
+	// CMS, versão 1.1 e o seu Object Identifier (OID) é 2.16.76.1.7.1.3.1.1.
 	public static final String POLICY_ID_AD_RV_CMS_V_1_1 = OIDICPBrasil.PREFIX_POLICE_ID + "3.1.1";
 
 	// O nome desta Política de Assinatura para a versão 2.0 é POLITICA
 	// ICP-BRASIL PARA ASSINATURA DIGITAL COM REFERENCIAS PARA VALIDACAO NO
 	// FORMATO
-	// CMS, versao 2.0 e o seu Object Identifier (OID) é 2.16.76.1.7.1.3.2.
+	// CMS, versão 2.0 e o seu Object Identifier (OID) é 2.16.76.1.7.1.3.2.
 	public static final String POLICY_ID_AD_RV_CMS_V_2_0 = OIDICPBrasil.PREFIX_POLICE_ID + "3.2";
 
 	// O nome desta Política de Assinatura para a versão 2.1 é POLITICA
 	// ICP-BRASIL PARA ASSINATURA DIGITAL COM REFERENCIAS PARA VALIDACAO NO
 	// FORMATO
-	// CMS, versao 2.1 e o seu Object Identifier (OID) é 2.16.76.1.7.1.3.2.1.
+	// CMS, versão 2.1 e o seu Object Identifier (OID) é 2.16.76.1.7.1.3.2.1.
 	public static final String POLICY_ID_AD_RV_CMS_V_2_1 = OIDICPBrasil.PREFIX_POLICE_ID + "3.2.1";
 
 	// O nome desta Política de Assinatura para a versão 1.0 é POLITICA
 	// ICP-BRASIL PARA ASSINATURA DIGITAL COM REFERENCIAS COMPLETAS NO FORMATO
 	// CMS,
-	// versao 1.0 e o seu Object Identifier (OID) é 2.16.76.1.7.1.4.1.
+	// versão 1.0 e o seu Object Identifier (OID) é 2.16.76.1.7.1.4.1.
 	public static final String POLICY_ID_AD_RC_CMS_V_1_0 = OIDICPBrasil.PREFIX_POLICE_ID + "4.1";
 
 	// O nome desta Política de Assinatura para a versão 1.1 é POLITICA
 	// ICP-BRASIL PARA ASSINATURA DIGITAL COM REFERENCIAS COMPLETAS NO FORMATO
 	// CMS,
-	// versao 1.1 e o seu Object Identifier (OID) é 2.16.76.1.7.1.4.1.1.
+	// versão 1.1 e o seu Object Identifier (OID) é 2.16.76.1.7.1.4.1.1.
 	public static final String POLICY_ID_AD_RC_CMS_V_1_1 = OIDICPBrasil.PREFIX_POLICE_ID + "4.1.1";
 
 	// O nome desta Política de Assinatura para a versão 2.0 é POLITICA
 	// ICP-BRASIL PARA ASSINATURA DIGITAL COM REFERENCIAS COMPLETAS NO FORMATO
 	// CMS,
-	// versao 2.0 e o seu Object Identifier (OID) é 2.16.76.1.7.1.4.2.
+	// versão 2.0 e o seu Object Identifier (OID) é 2.16.76.1.7.1.4.2.
 	public static final String POLICY_ID_AD_RC_CMS_V_2_0 = OIDICPBrasil.PREFIX_POLICE_ID + "4.2";
 
 	// O nome desta Política de Assinatura para a versão 2.1 é POLITICA
 	// ICP-BRASIL PARA ASSINATURA DIGITAL COM REFERENCIAS COMPLETAS NO FORMATO
 	// CMS,
-	// versao 2.1 e o seu Object Identifier (OID) é 2.16.76.1.7.1.4.2.1.
+	// versão 2.1 e o seu Object Identifier (OID) é 2.16.76.1.7.1.4.2.1.
 	public static final String POLICY_ID_AD_RC_CMS_V_2_1 = OIDICPBrasil.PREFIX_POLICE_ID + "4.2.1";
 
 	// O nome desta Política de Assinatura para a versão 1.0 é POLITICA
 	// ICP-BRASIL PARA ASSINATURA DIGITAL COM REFERENCIAS PARA ARQUIVAMENTO NO
-	// FORMATO CMS, versao 1.0 e o seu Object Identifier (OID) é
+	// FORMATO CMS, versão 1.0 e o seu Object Identifier (OID) é
 	// 2.16.76.1.7.1.5.1.
 	public static final String POLICY_ID_AD_RA_CMS_V_1_0 = OIDICPBrasil.PREFIX_POLICE_ID + "5.1";
 
 	// O nome desta Política de Assinatura para a versão 1.1 é POLITICA
 	// ICP-BRASIL PARA ASSINATURA DIGITAL COM REFERENCIAS PARA ARQUIVAMENTO NO
-	// FORMATO CMS, versao 1.1 e o seu Object Identifier (OID) é
+	// FORMATO CMS, versão 1.1 e o seu Object Identifier (OID) é
 	// 2.16.76.1.7.1.5.1.1.
 	public static final String POLICY_ID_AD_RA_CMS_V_1_1 = OIDICPBrasil.PREFIX_POLICE_ID + "5.1.1";
 
 	// O nome desta Política de Assinatura para a versão 2.0 é POLITICA
 	// ICP-BRASIL PARA ASSINATURA DIGITAL COM REFERENCIAS PARA ARQUIVAMENTO NO
-	// FORMATO CMS, versao 2.0 e o seu Object Identifier (OID) é
+	// FORMATO CMS, versão 2.0 e o seu Object Identifier (OID) é
 	// 2.16.76.1.7.1.5.2.
 	public static final String POLICY_ID_AD_RA_CMS_V_2_0 = OIDICPBrasil.PREFIX_POLICE_ID + "5.2";
 
 	// O nome desta Política de Assinatura para a versão 2.1 é POLITICA
 	// ICP-BRASIL PARA ASSINATURA DIGITAL COM REFERENCIAS PARA ARQUIVAMENTO NO
-	// FORMATO CMS, versao 2.1 e o seu Object Identifier (OID) é
+	// FORMATO CMS, versão 2.1 e o seu Object Identifier (OID) é
 	// 2.16.76.1.7.1.5.2.1.
 	public static final String POLICY_ID_AD_RA_CMS_V_2_1 = OIDICPBrasil.PREFIX_POLICE_ID + "5.2.1";
 
 	// O nome desta Política de Assinatura para a versão 1.0 é POLITICA
 	// ICP-BRASIL PARA ASSINATURA DIGITAL COM REFERENCIA BASICA NO FORMATO
 	// XML-DSig,
-	// versao 1.0 e o seu Object Identifier (OID) é 2.16.76.1.7.1.6.1.
+	// versão 1.0 e o seu Object Identifier (OID) é 2.16.76.1.7.1.6.1.
 	public static final String POLICY_ID_AD_RB_XML_V_1_0 = OIDICPBrasil.PREFIX_POLICE_ID + "6.1";
 
 	// O nome desta Política de Assinatura para a versão 1.1 é POLITICA
 	// ICP-BRASIL PARA ASSINATURA DIGITAL COM REFERENCIA BASICA NO FORMATO
 	// XML-DSig,
-	// versao 1.1 e o seu Object Identifier (OID) é 2.16.76.1.7.1.6.1.1.
+	// versão 1.1 e o seu Object Identifier (OID) é 2.16.76.1.7.1.6.1.1.
 	public static final String POLICY_ID_AD_RB_XML_V_1_1 = OIDICPBrasil.PREFIX_POLICE_ID + "6.1.1";
 
 	// O nome desta Política de Assinatura para a versão 2.0 é POLITICA
 	// ICP-BRASIL PARA ASSINATURA DIGITAL COM REFERENCIA BASICA NO FORMATO
 	// XML-DSig,
-	// versao 2.0 e o seu Object Identifier (OID) é 2.16.76.1.7.1.6.2.
+	// versão 2.0 e o seu Object Identifier (OID) é 2.16.76.1.7.1.6.2.
 	public static final String POLICY_ID_AD_RB_XML_V_2_0 = OIDICPBrasil.PREFIX_POLICE_ID + "6.2";
 
 	// O nome desta Política de Assinatura para a versão 2.1 é POLITICA
 	// ICP-BRASIL PARA ASSINATURA DIGITAL COM REFERENCIA BASICA NO FORMATO
 	// XML-DSig,
-	// versao 2.1 e o seu Object Identifier (OID) é 2.16.76.1.7.1.6.2.1.
+	// versão 2.1 e o seu Object Identifier (OID) é 2.16.76.1.7.1.6.2.1.
 	public static final String POLICY_ID_AD_RB_XML_V_2_1 = OIDICPBrasil.PREFIX_POLICE_ID + "6.2.1";
 
 	// O nome desta Política de Assinatura para a versão 1.0 é POLITICA
 	// ICP-BRASIL PARA ASSINATURA DIGITAL COM REFERENCIA DO TEMPO NO FORMATO
-	// XML-DSig, versao 1.0 e o seu Object Identifier (OID) é 2.16.76.1.7.1.7.1.
+	// XML-DSig, versão 1.0 e o seu Object Identifier (OID) é 2.16.76.1.7.1.7.1.
 	public static final String POLICY_ID_AD_RT_XML_V_1_0 = OIDICPBrasil.PREFIX_POLICE_ID + "7.1";
 
 	// O nome desta Política de Assinatura para a versão 1.1 é POLITICA
 	// ICP-BRASIL PARA ASSINATURA DIGITAL COM REFERENCIA DO TEMPO NO FORMATO
-	// XML-DSig, versao 1.1 e o seu Object Identifier (OID) é
+	// XML-DSig, versão 1.1 e o seu Object Identifier (OID) é
 	// 2.16.76.1.7.1.7.1.1.
 	public static final String POLICY_ID_AD_RT_XML_V_1_1 = OIDICPBrasil.PREFIX_POLICE_ID + "7.1.1";
 
 	// O nome desta Política de Assinatura para a versão 2.0 é POLITICA
 	// ICP-BRASIL PARA ASSINATURA DIGITAL COM REFERENCIA DO TEMPO NO FORMATO
-	// XML-DSig, versao 2.0 e o seu Object Identifier (OID) é 2.16.76.1.7.1.7.2.
+	// XML-DSig, versão 2.0 e o seu Object Identifier (OID) é 2.16.76.1.7.1.7.2.
 	public static final String POLICY_ID_AD_RT_XML_V_2_0 = OIDICPBrasil.PREFIX_POLICE_ID + "7.2";
 
 	// O nome desta Política de Assinatura para a versão 2.1 é POLITICA
 	// ICP-BRASIL PARA ASSINATURA DIGITAL COM REFERENCIA DO TEMPO NO FORMATO
-	// XML-DSig, versao 2.1 e o seu Object Identifier (OID) é
+	// XML-DSig, versão 2.1 e o seu Object Identifier (OID) é
 	// 2.16.76.1.7.1.7.2.1.
 	public static final String POLICY_ID_AD_RT_XML_V_2_1 = OIDICPBrasil.PREFIX_POLICE_ID + "7.1.1";
 
 	// O nome desta Política de Assinatura para a versão 1.0 é POLITICA
 	// ICP-BRASIL PARA ASSINATURA DIGITAL COM REFERENCIAS PARA VALIDACAO NO
 	// FORMATO
-	// XML-DSig, versao 1.0 e o seu Object Identifier (OID) é 2.16.76.1.7.1.8.1.
+	// XML-DSig, versão 1.0 e o seu Object Identifier (OID) é 2.16.76.1.7.1.8.1.
 	public static final String POLICY_ID_AD_RV_XML_V_1_0 = OIDICPBrasil.PREFIX_POLICE_ID + "8.1";
 
 	// O nome desta Política de Assinatura para a versão 1.1 é POLITICA
 	// ICP-BRASIL PARA ASSINATURA DIGITAL COM REFERENCIAS PARA VALIDACAO NO
 	// FORMATO
-	// XML-DSig, versao 1.1 e o seu Object Identifier (OID) é
+	// XML-DSig, versão 1.1 e o seu Object Identifier (OID) é
 	// 2.16.76.1.7.1.8.1.1.
 	public static final String POLICY_ID_AD_RV_XML_V_1_1 = OIDICPBrasil.PREFIX_POLICE_ID + "8.1.1";
 
 	// O nome desta Política de Assinatura para a versão 2.0 é POLITICA
 	// ICP-BRASIL PARA ASSINATURA DIGITAL COM REFERENCIAS PARA VALIDACAO NO
 	// FORMATO
-	// XML-DSig, versao 2.0 e o seu Object Identifier (OID) é 2.16.76.1.7.1.8.2.
+	// XML-DSig, versão 2.0 e o seu Object Identifier (OID) é 2.16.76.1.7.1.8.2.
 	public static final String POLICY_ID_AD_RV_XML_V_2_0 = OIDICPBrasil.PREFIX_POLICE_ID + "8.2";
 
 	// O nome desta Política de Assinatura para a versão 2.1 é POLITICA
 	// ICP-BRASIL PARA ASSINATURA DIGITAL COM REFERENCIAS PARA VALIDACAO NO
 	// FORMATO
-	// XML-DSig, versao 2.1 e o seu Object Identifier (OID) é
+	// XML-DSig, versão 2.1 e o seu Object Identifier (OID) é
 	// 2.16.76.1.7.1.8.2.1.
 	public static final String POLICY_ID_AD_RV_XML_V_2_1 = OIDICPBrasil.PREFIX_POLICE_ID + "8.2.1";
 
 	// O nome desta Política de Assinatura para a versão 1.0 é POLITICA
 	// ICP-BRASIL PARA ASSINATURA DIGITAL COM REFERENCIAS COMPLETAS NO FORMATO
-	// XMLDSig, versao 1.0 e o seu Object Identifier (OID) é 2.16.76.1.7.1.9.1.
+	// XMLDSig, versão 1.0 e o seu Object Identifier (OID) é 2.16.76.1.7.1.9.1.
 	public static final String POLICY_ID_AD_RC_XML_V_1_0 = OIDICPBrasil.PREFIX_POLICE_ID + "9.1";
 
 	// O nome desta Política de Assinatura para a versão 1.1 é POLITICA
 	// ICP-BRASIL PARA ASSINATURA DIGITAL COM REFERENCIAS COMPLETAS NO FORMATO
-	// XMLDSig, versao 1.1 e o seu Object Identifier (OID) é
+	// XMLDSig, versão 1.1 e o seu Object Identifier (OID) é
 	// 2.16.76.1.7.1.9.1.1.
 	public static final String POLICY_ID_AD_RC_XML_V_1_1 = OIDICPBrasil.PREFIX_POLICE_ID + "9.1.1";
 
 	// O nome desta Política de Assinatura para a versão 2.0 é POLITICA
 	// ICP-BRASIL PARA ASSINATURA DIGITAL COM REFERENCIAS COMPLETAS NO FORMATO
-	// XMLDSig, versao 2.0 e o seu Object Identifier (OID) é 2.16.76.1.7.1.9.2.
+	// XMLDSig, versão 2.0 e o seu Object Identifier (OID) é 2.16.76.1.7.1.9.2.
 	public static final String POLICY_ID_AD_RC_XML_V_2_0 = OIDICPBrasil.PREFIX_POLICE_ID + "9.2";
 
 	// O nome desta Política de Assinatura para a versão 2.1 é POLITICA
 	// ICP-BRASIL PARA ASSINATURA DIGITAL COM REFERENCIAS COMPLETAS NO FORMATO
-	// XMLDSig, versao 2.1 e o seu Object Identifier (OID) é
+	// XMLDSig, versão 2.1 e o seu Object Identifier (OID) é
 	// 2.16.76.1.7.1.9.2.1.
 	public static final String POLICY_ID_AD_RC_XML_V_2_1 = OIDICPBrasil.PREFIX_POLICE_ID + "9.2.1";
 
 	// O nome desta Política de Assinatura para a versão 1.0 é POLITICA
 	// ICP-BRASIL PARA ASSINATURA DIGITAL COM REFERENCIAS PARA ARQUIVAMENTO NO
-	// FORMATO XML-DSig, versao 1.0 e o seu Object Identifier (OID) é
+	// FORMATO XML-DSig, versão 1.0 e o seu Object Identifier (OID) é
 	// 2.16.76.1.7.1.10.1.
 	public static final String POLICY_ID_AD_RA_XML_V_1_0 = OIDICPBrasil.PREFIX_POLICE_ID + "10.1";
 
 	// O nome desta Política de Assinatura para a versão 1.1 é POLITICA
 	// ICP-BRASIL PARA ASSINATURA DIGITAL COM REFERENCIAS PARA ARQUIVAMENTO NO
-	// FORMATO XML-DSig, versao 1.1 e o seu Object Identifier (OID) é
+	// FORMATO XML-DSig, versão 1.1 e o seu Object Identifier (OID) é
 	// 2.16.76.1.7.1.10.1.1.
 	public static final String POLICY_ID_AD_RA_XML_V_1_1 = OIDICPBrasil.PREFIX_POLICE_ID + "10.1.1";
 
 	// O nome desta Política de Assinatura para a versão 2.0 é POLITICA
 	// ICP-BRASIL PARA ASSINATURA DIGITAL COM REFERENCIAS PARA ARQUIVAMENTO NO
-	// FORMATO XML-DSig, versao 2.0 e o seu Object Identifier (OID) é
+	// FORMATO XML-DSig, versão 2.0 e o seu Object Identifier (OID) é
 	// 2.16.76.1.7.1.10.2.
 	public static final String POLICY_ID_AD_RA_XML_V_2_0 = OIDICPBrasil.PREFIX_POLICE_ID + "10.2";
 
 	// O nome desta Política de Assinatura para a versão 2.1 é POLITICA
 	// ICP-BRASIL PARA ASSINATURA DIGITAL COM REFERENCIAS PARA ARQUIVAMENTO NO
-	// FORMATO XML-DSig, versao 2.1 e o seu Object Identifier (OID) é
+	// FORMATO XML-DSig, versão 2.1 e o seu Object Identifier (OID) é
 	// 2.16.76.1.7.1.10.2.1.
 	public static final String POLICY_ID_AD_RA_XML_V_2_1 = OIDICPBrasil.PREFIX_POLICE_ID + "10.2.1";
 }

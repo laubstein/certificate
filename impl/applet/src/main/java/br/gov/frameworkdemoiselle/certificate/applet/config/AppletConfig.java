@@ -42,11 +42,11 @@ import java.util.MissingResourceException;
 import java.util.ResourceBundle;
 
 /**
- * Enum com todas as chaves e valores das configuracoes do componente.
+ * Enum com todas as chaves e valores das configurações do componente.
  * 
- * Os valores das chaves sao obtidos ou nos parametros da applet ou no arquivo
- * de configuracao security-applet.properties do projeto desenvolvido com este
- * componente ou no security-applet-default.properties caso nao seja informado
+ * Os valores das chaves são obtidos ou nos parâmetros da applet ou no arquivo
+ * de configuração security-applet.properties do projeto desenvolvido com este
+ * componente ou no security-applet-default.properties caso não seja informado
  * nenhum outro resource.
  * 
  */
@@ -90,6 +90,8 @@ public enum AppletConfig {
 	MESSAGE_ERROR_PKCS11_NOT_FOUND("message.error.pkcs11.not.found"),
 	MESSAGE_ERROR_DRIVER_NOT_AVAILABLE("message.error.driver.not.available"),
 	MESSAGE_ERROR_DRIVER_INCOMPATIBLE("message.error.driver.incompatible"),
+	MESSAGE_ERROR_CLASS_NOT_FOUND("message.error.classNotFound"),
+	MESSAGE_ERROR_INCOMPATIBLE_CLASS("message.error.incompatibleClass"),
 
 	CONFIG_DIALOG_TABLE_LABEL("label.dialog.label.table"),
 	CONFIG_DIALOG_TABLE_LABEL_FONT("config.dialog.title.label.font"),
@@ -118,7 +120,9 @@ public enum AppletConfig {
 	CONFIG_DIALOG_BUTTON_CANCEL_X("config.dialog.button-cancel.x"),
 	CONFIG_DIALOG_BUTTON_CANCEL_Y("config.dialog.button-cancel.y"),
 	CONFIG_DIALOG_BUTTON_CANCEL_WIDTH("config.dialog.button-cancel.width"),
-	CONFIG_DIALOG_BUTTON_CANCEL_HEIGHT("config.dialog.button-cancel.height");
+	CONFIG_DIALOG_BUTTON_CANCEL_HEIGHT("config.dialog.button-cancel.height"),
+	
+	CONFIG_SHOW_ERROR_DIALOG("config.show.error");
 
 	private String key;
 	private static ResourceBundle rb;
@@ -135,7 +139,7 @@ public enum AppletConfig {
 
 	/**
 	 * Retorna o valor de enum para uma determinada chave Primeiramente é
-	 * verificado se a chave foi informada como parametro do applet, se não, é
+	 * verificado se a chave foi informada como parâmetro do applet, se não, é
 	 * obtida a chave no resource bundle que pode ser da aplicacao ou caso nao
 	 * seja informado sera utilizado o resouce default do componente.
 	 * 

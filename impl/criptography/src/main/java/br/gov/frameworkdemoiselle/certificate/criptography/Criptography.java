@@ -110,12 +110,12 @@ public interface Criptography {
 	public void setKey(Key key);
 
 	/**
-	 * Retorna o conteudo passado como parametro criptografado.
+	 * Retorna o conteúdo passado como parâmetro criptografado.
 	 */
 	public byte[] cipher(byte[] content);
 
 	/**
-	 * Retorna o conteudo passado como parametro descriptografado.
+	 * Retorna o conteúdo passado como parâmetro descriptografado.
 	 */
 	public byte[] decipher(byte[] content);
 

@@ -91,14 +91,14 @@ public class JKeyStoreDialog extends JDialog {
 	/**
 	 * Indica se o keystore foi carregado com sucesso.
 	 * 
-	 * @return True, se for carregado com sucesso. False se contrario.
+	 * @return True, se for carregado com sucesso. False se contrário.
 	 */
 	public boolean isLoaded() {
 		return loaded;
 	}
 
 	/**
-	 * Construtor. Aciona a inicializacao dos demais componentes
+	 * Construtor. Aciona a inicialização dos demais componentes
 	 */
 	public JKeyStoreDialog() {
 		init();
@@ -228,8 +228,9 @@ public class JKeyStoreDialog extends JDialog {
 
 	/**
 	 * Retorna o keystore do dispositivo a partir do valor de pin
+	 * @throws Exception 
 	 */
-	public KeyStore getKeyStore() {
+	public KeyStore getKeyStore() throws Exception {
 		try {
 			Cursor hourGlassCursor = new Cursor(Cursor.WAIT_CURSOR);
 			setCursor(hourGlassCursor);
@@ -239,16 +240,40 @@ public class JKeyStoreDialog extends JDialog {
 			loaded = true;
 			return keystore;
 		} catch (DriverNotAvailableException e) {
+			if (!AppletConfig.CONFIG_SHOW_ERROR_DIALOG.getValueBoolean()) {
+				throw e;
+			}
+			
 			showError(AppletConfig.MESSAGE_ERROR_DRIVER_NOT_AVAILABLE.getValue());
 		} catch (PKCS11NotFoundException e) {
+			if (!AppletConfig.CONFIG_SHOW_ERROR_DIALOG.getValueBoolean()) {
+				throw e;
+			}
+			
 			showError(AppletConfig.MESSAGE_ERROR_PKCS11_NOT_FOUND.getValue());
 		} catch (CertificateValidatorException e) {
+			if (!AppletConfig.CONFIG_SHOW_ERROR_DIALOG.getValueBoolean()) {
+				throw e;
+			}
+			
 			showError(AppletConfig.MESSAGE_ERROR_LOAD_TOKEN.getValue());
 		} catch (InvalidPinException e) {
+			if (!AppletConfig.CONFIG_SHOW_ERROR_DIALOG.getValueBoolean()) {
+				throw e;
+			}
+			
 			showError(AppletConfig.MESSAGE_ERROR_INVALID_PIN.getValue());
-		} catch (KeyStoreLoaderException ke) {
-			showError(ke.getMessage());
-		} catch (Exception ex) {
+		} catch (KeyStoreLoaderException e) {
+			if (!AppletConfig.CONFIG_SHOW_ERROR_DIALOG.getValueBoolean()) {
+				throw e;
+			}
+			
+			showError(e.getMessage());
+		} catch (Exception e) {
+			if (!AppletConfig.CONFIG_SHOW_ERROR_DIALOG.getValueBoolean()) {
+				throw e;
+			}
+			
 			showError(AppletConfig.MESSAGE_ERROR_UNEXPECTED.getValue());
 		} finally {
 			Cursor hourGlassCursos = new Cursor(Cursor.DEFAULT_CURSOR);

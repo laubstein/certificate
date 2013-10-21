@@ -48,7 +48,7 @@ import br.gov.frameworkdemoiselle.certificate.keystore.loader.KeyStoreLoaderExce
 /**
  * Classe responsável por recuperar informações do sistema tais como versão do
  * sistema operacional e versão da JVM.<br>
- * Manipula também informaões dos drivers PKCS#11 a serem utilizados pelo
+ * Manipula também informações dos drivers PKCS#11 a serem utilizados pelo
  * componente.<br>
  * É possível adicionar um Driver PKCS#11 em tempo de execução, não restringindo
  * a utilização apenas dos drivers configurados no componente.
@@ -56,19 +56,7 @@ import br.gov.frameworkdemoiselle.certificate.keystore.loader.KeyStoreLoaderExce
 public class Configuration {
 
     private static final Logger logger = LoggerFactory.getLogger(Configuration.class);
-    protected static final String NAME_NULL = "Nome do driver deve ser informado";
-    protected static final String PATH_NULL = "Path do driver deve ser informado";
-    protected static final String PATH_INVALID = "Path do driver é inválido. O path deve conter o diretório e o nome do arquivo";
-    protected static final String DRIVER_ERROR_LOAD = "Impossivel carregar o driver";
-    protected static final String DRIVER_ERROR_LOAD_VARIABLE = "Impossivel carregar o driver definido na variavel de ambiente";
-    protected static final String KEY_JAVA_VERSION = "java.runtime.version";
-    protected static final String KEY_OS_NAME = "os.name";
-    protected static final String VAR_PKCS11_CONFIG = "PKCS11_CONFIG_FILE";
-    protected static final String VAR_PKCS11_DRIVER = "PKCS11_DRIVER";
-    protected static final String CUSTOM_CONFIG_PATH = "user.home";
-    protected static final String CUSTOM_CONFIG_FILENAME = "drivers.config";
-    protected static final String FILE_SEPARATOR = "file.separator";
-    protected static final String MSCAPI_DISABLED = "mscapi.disabled";
+    
     private static final Configuration instance = new Configuration();
     private final Map<String, String> drivers = new HashMap<String, String>();
 
@@ -121,14 +109,14 @@ public class Configuration {
             try {
                 this.addDriver(driver, map.get(driver));
             } catch (Throwable error) {
-                Configuration.logger.error(DRIVER_ERROR_LOAD + " " + driver, error);
+                Configuration.logger.error(LoaderConfig.DRIVER_ERROR_LOAD.getValue(driver), error);
             }
         }
 
         try {
             this.getPKCS11DriverFromVariable();
         } catch (Throwable error) {
-            Configuration.logger.error(DRIVER_ERROR_LOAD, error);
+            Configuration.logger.error(LoaderConfig.DRIVER_ERROR_LOAD.getValue(""), error);
         }
 
     }
@@ -144,11 +132,11 @@ public class Configuration {
      * @return versao da JVM atual
      */
     public String getJavaVersion() {
-        return System.getProperty(Configuration.KEY_JAVA_VERSION);
+        return System.getProperty(LoaderConfig.KEY_JAVA_VERSION.getValue());
     }
 
     public boolean isMSCapiDisabled() {
-        boolean enabled = Boolean.parseBoolean(this.getContentFromVariables(Configuration.MSCAPI_DISABLED));
+        boolean enabled = Boolean.parseBoolean(this.getContentFromVariables(LoaderConfig.MSCAPI_DISABLED.getValue()));
         return enabled;
     }
 
@@ -159,7 +147,7 @@ public class Configuration {
      * @return nome do sistema operacional atual
      */
     public String getSO() {
-        return System.getProperty(Configuration.KEY_OS_NAME);
+        return System.getProperty(LoaderConfig.KEY_OS_NAME.getValue());
     }
 
     /**
@@ -186,16 +174,16 @@ public class Configuration {
     public void addDriver(String name, String fileName) {
 
         if (name == null || "".equals(name)) {
-            throw new KeyStoreLoaderException(Configuration.NAME_NULL);
+            throw new KeyStoreLoaderException(LoaderConfig.NAME_NULL.getValue());
         }
 
         if (fileName == null || "".equals(fileName)) {
-            throw new KeyStoreLoaderException(Configuration.PATH_NULL);
+            throw new KeyStoreLoaderException(LoaderConfig.PATH_NULL.getValue());
         }
 
         File file = new File(fileName);
         if (!file.exists() || !file.isFile()) {
-            throw new KeyStoreLoaderException(Configuration.PATH_INVALID);
+            throw new KeyStoreLoaderException(LoaderConfig.PATH_INVALID.getValue());
         }
 
         Configuration.logger.debug("Adicionando o driver " + name + "::" + fileName + " na lista de drivers");
@@ -217,7 +205,7 @@ public class Configuration {
      */
     public void addDriver(String fileName) {
         if (fileName == null || fileName.trim().length() <= 0) {
-            throw new KeyStoreLoaderException("Nome do arquivo é requerido");
+            throw new KeyStoreLoaderException(LoaderConfig.FILE_NAME_REQUIRED.getValue());
         }
         String driverName = fileName.replaceAll("\\\\", "/");
         int begin = driverName.lastIndexOf("/");
@@ -232,19 +220,19 @@ public class Configuration {
     /**
      * Recuperar o path do arquivo de configuração para SunPKCS11 de acordo com
      * o site. Para utilizar o arquivo de configuracao, basta informar o seu
-     * path em uma variavel de ambiente ou então como parametro da JVM Java 1.5
+     * path em uma variável de ambiente ou então como parâmetro da JVM Java 1.5
      * - http://java.sun.com/j2se/1.5.0/docs/guide/security/p11guide.html Java
      * 1.6 -
      * http://java.sun.com/javase/6/docs/technotes/guides/security/p11guide.html
      */
     public String getPKCS11ConfigFile() {
-        String filePath = this.getContentFromVariables(Configuration.VAR_PKCS11_CONFIG);
+        String filePath = this.getContentFromVariables(LoaderConfig.VAR_PKCS11_CONFIG.getValue());
         return filePath;
     }
 
     /**
-     * Recuperar o driver e seu path a partir de variavel de ambiente ou
-     * variavel da JVM. Exemplo de definicao: JVM:
+     * Recuperar o driver e seu path a partir de variável de ambiente ou
+     * variável da JVM. Exemplo de definicao: JVM:
      * -DPKCS11_DRIVER=Pronova::/usr/lib/libepsng_p11.so ou
      * -DPKCS11_DRIVER=/usr/lib/libepsng_p11.so Variavel de ambiente Linux
      * export PKCS11_DRIVER=Pronova::/usr/lib/libepsng_p11.so ou export
@@ -254,7 +242,7 @@ public class Configuration {
      */
     public void getPKCS11DriverFromVariable() {
 
-        String driverInfo = this.getContentFromVariables(Configuration.VAR_PKCS11_DRIVER);
+        String driverInfo = this.getContentFromVariables(LoaderConfig.VAR_PKCS11_DRIVER.getValue());
 
         if (driverInfo != null) {
 
@@ -272,12 +260,12 @@ public class Configuration {
     }
 
     /**
-     * Busca nas variaveis de ambiente ou em variavel da JVM um determinado
-     * valor. Prioridade para as variaveis de ambiente.
+     * Busca nas variáveis de ambiente ou em variável da JVM um determinado
+     * valor. Prioridade para as variáveis de ambiente.
      *
-     * @param key Chave de localizacao da variavel
-     * @return O conteudo definida em uma das variaveis. NULL se nenhuma
-     * variavel for definida
+     * @param key Chave de localizacao da variável
+     * @return O conteúdo definida em uma das variáveis. NULL se nenhuma
+     * variável for definida
      */
     private String getContentFromVariables(String key) {
         String content = System.getenv(key);
@@ -299,8 +287,8 @@ public class Configuration {
         }
 
         if (content == null) {
-            String filename = System.getProperty(CUSTOM_CONFIG_PATH) + System.getProperty(FILE_SEPARATOR)
-                    + CUSTOM_CONFIG_FILENAME;
+            String filename = System.getProperty(LoaderConfig.CUSTOM_CONFIG_PATH.getValue()) + System.getProperty(LoaderConfig.FILE_SEPARATOR.getValue())
+                    + LoaderConfig.CUSTOM_CONFIG_FILENAME.getValue();
             boolean exists = (new File(filename)).exists();
             if (exists) {
                 content = filename;

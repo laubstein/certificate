@@ -37,10 +37,13 @@
 
 package br.gov.frameworkdemoiselle.certificate.applet.factory;
 
+import java.text.MessageFormat;
+
 import br.gov.frameworkdemoiselle.certificate.applet.action.AppletExecute;
+import br.gov.frameworkdemoiselle.certificate.applet.config.AppletConfig;
 
 /**
- * Fabrica de AppletExecute
+ * Fábrica de AppletExecute
  * 
  * @author SUPST/STDCS
  * 
@@ -60,13 +63,13 @@ public class AppletExecuteFactory {
 		try {
 			clazz = Class.forName(className);
 		} catch (Throwable error) {
-			throw new FactoryException("Class [" + className + "] not found", error);
+			throw new FactoryException(MessageFormat.format(AppletConfig.MESSAGE_ERROR_CLASS_NOT_FOUND.getValue(), className), error);
 		}
 		if (clazz != null) {
 			try {
 				instance = (AppletExecute) clazz.newInstance();
 			} catch (Throwable error) {
-				throw new FactoryException("incompatible Class [" + clazz.getCanonicalName() + "]", error);
+				throw new FactoryException(MessageFormat.format(AppletConfig.MESSAGE_ERROR_INCOMPATIBLE_CLASS.getValue(), clazz.getCanonicalName()), error);
 			}
 		}
 		return instance;

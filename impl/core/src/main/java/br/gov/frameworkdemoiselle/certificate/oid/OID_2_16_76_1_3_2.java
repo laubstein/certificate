@@ -67,7 +67,7 @@ package br.gov.frameworkdemoiselle.certificate.oid;
  * Classe OID 2.16.76.1.3.2 <br>
  * <br>
  * Possui alguns atributos especificos de pessoa juridica ou equipamento: <br>
- * <b>*</b> Nome do responsavel pelo certificado <br>
+ * <b>*</b> Nome do responsável pelo certificado <br>
  * 
  */
 public class OID_2_16_76_1_3_2 extends OIDGeneric {
@@ -83,7 +83,7 @@ public class OID_2_16_76_1_3_2 extends OIDGeneric {
 
 	/**
 	 * 
-	 * @return nome do responsavel pelo certificado
+	 * @return nome do responsável pelo certificado
 	 */
 	public String getNome() {
 		return super.getData();

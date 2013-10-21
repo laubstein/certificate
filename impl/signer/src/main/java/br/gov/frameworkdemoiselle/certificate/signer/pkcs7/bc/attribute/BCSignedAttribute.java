@@ -41,7 +41,7 @@ import br.gov.frameworkdemoiselle.certificate.signer.pkcs7.attribute.Attribute;
 import br.gov.frameworkdemoiselle.certificate.signer.pkcs7.attribute.SignedAttribute;
 
 /**
- * Conversao de atributos do componente para BouncyCastle
+ * Conversão de atributos do componente para BouncyCastle
  * 
  */
 public abstract class BCSignedAttribute extends BCAttribute implements SignedAttribute {

@@ -64,8 +64,8 @@ public interface Digest {
 	public void setAlgorithm(String algorithm);
 
 	/**
-	 * Método responsável por gerar um resumo do conteudo passado como
-	 * parametro, utilizando para isso o algoritmo setado pelo método
+	 * Método responsável por gerar um resumo do conteúdo passado como
+	 * parâmetro, utilizando para isso o algoritmo setado pelo método
 	 * setAlgorithm()
 	 */
 	public byte[] digest(byte[] content);

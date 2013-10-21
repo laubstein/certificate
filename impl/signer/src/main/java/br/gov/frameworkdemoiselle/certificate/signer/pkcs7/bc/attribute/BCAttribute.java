@@ -42,6 +42,7 @@ import org.bouncycastle.asn1.DERObjectIdentifier;
 
 import br.gov.frameworkdemoiselle.certificate.signer.SignerException;
 import br.gov.frameworkdemoiselle.certificate.signer.pkcs7.attribute.Attribute;
+import br.gov.frameworkdemoiselle.certificate.signer.util.Messages;
 
 /**
  * Conversao de atributos do componente para BouncyCastle
@@ -54,7 +55,7 @@ public abstract class BCAttribute implements Attribute {
 	public BCAttribute(Attribute attribute) {
 		this.attribute = attribute;
 		if (this.attribute == null) {
-			throw new SignerException("Attribute is null");
+			throw new SignerException(Messages.getString("error.attributeIsNull"));
 		}
 	}
 

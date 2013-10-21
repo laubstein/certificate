@@ -49,13 +49,13 @@ public class Configuration {
 	}
 
 	/**
-	 * Busca nas variaveis de ambiente ou em variavel da JVM um determinado
-	 * valor. Prioridade para as variaveis de ambiente.
+	 * Busca nas variáveis de ambiente ou em variável da JVM um determinado
+	 * valor. Prioridade para as variáveis de ambiente.
 	 * 
 	 * @param key
-	 *            Chave de localizacao da variavel
-	 * @return O conteudo definida em uma das variaveis. NULL se nenhuma
-	 *         variavel for definida
+	 *            Chave de localizacao da variável
+	 * @return O conteúdo definida em uma das variáveis. NULL se nenhuma
+	 *         variável for definida
 	 */
 	public String getContentFromVariables(String key) {
 		String content = System.getenv(key);

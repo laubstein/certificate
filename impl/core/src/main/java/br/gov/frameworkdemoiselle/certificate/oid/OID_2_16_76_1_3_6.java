@@ -62,7 +62,7 @@ public class OID_2_16_76_1_3_6 extends OIDGeneric {
 
 	/**
 	 * 
-	 * @return string de 12 posicoes com o numero do cadastro no INSS(CEI).
+	 * @return string de 12 posições com o número do cadastro no INSS(CEI).
 	 */
 	public String getCEI() {
 		return properties.get("CEI");

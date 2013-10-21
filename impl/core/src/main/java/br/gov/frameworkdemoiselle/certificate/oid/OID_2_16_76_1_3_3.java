@@ -61,7 +61,7 @@ public class OID_2_16_76_1_3_3 extends OIDGeneric {
 
 	/**
 	 * 
-	 * @return numero do Cadastro Nacional de Pessoa Juridica (CNPJ) da empresa
+	 * @return número do Cadastro Nacional de Pessoa Juridica (CNPJ) da empresa
 	 *         titular do certificado
 	 */
 	public String getCNPJ() {

@@ -135,7 +135,7 @@ public class CriptographyImpl implements Criptography {
 	}
 
 	/**
-	 * Método que criptografa um conteudo informado como byte[] Utiliza o
+	 * Método que criptografa um conteúdo informado como byte[] Utiliza o
 	 * algoritmo setado pelo método setAlgorithm() Caso tenha sido informado
 	 * algum provider, este também será utilizado.
 	 */
@@ -149,7 +149,7 @@ public class CriptographyImpl implements Criptography {
 	}
 
 	/**
-	 * Método que descriptografa um conteudo informado como byte[] Utiliza o
+	 * Método que descriptografa um conteúdo informado como byte[] Utiliza o
 	 * algoritmo setado pelo método setAlgorithm() Caso tenha sido informado
 	 * algum provider, este também será utilizado.
 	 */
@@ -164,7 +164,7 @@ public class CriptographyImpl implements Criptography {
 
 	/**
 	 * Executa o algoritmo de criptografia no modo de cifragem ou decifragem É
-	 * necessário setar a chave criptografica antes de encriptar um conteudo
+	 * necessário setar a chave criptografica antes de encriptar um conteúdo
 	 * 
 	 * @param content
 	 *            conteúdo original

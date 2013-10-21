@@ -78,6 +78,7 @@ import br.gov.frameworkdemoiselle.certificate.signer.pkcs7.SignaturePolicyExcept
 import br.gov.frameworkdemoiselle.certificate.signer.pkcs7.attribute.SigPolicyQualifierInfoURL;
 import br.gov.frameworkdemoiselle.certificate.signer.pkcs7.attribute.SignaturePolicyId;
 import br.gov.frameworkdemoiselle.certificate.signer.pkcs7.attribute.SigningCertificate;
+import br.gov.frameworkdemoiselle.certificate.signer.util.Messages;
 import br.gov.frameworkdemoiselle.certificate.signer.util.ValidadorUtil;
 import br.gov.frameworkdemoiselle.certificate.signer.util.ValidadorUtil.CertPathEncoding;
 
@@ -87,7 +88,7 @@ import br.gov.frameworkdemoiselle.certificate.signer.util.ValidadorUtil.CertPath
  * POLÍTICA ICP-BRASIL PARA ASSINATURA DIGITAL COM REFERÊNCIA BÁSICA NO FORMATO
  * CMS versão 1.0
  * 
- * definina no documento: REQUISITOS DAS POLÍTICAS DE ASSINATURA DIGITAL NA
+ * definida no documento: REQUISITOS DAS POLÍTICAS DE ASSINATURA DIGITAL NA
  * ICP-BRASIL - DOC-ICP-15.03 - Versão 2.0 - 05 de abril de 2010
  * 
  */
@@ -109,7 +110,7 @@ public class ADRBCMS_1_0 implements SignaturePolicy {
 	public void validate(byte[] content, byte[] contentSigned) {
 
 		if (contentSigned == null || contentSigned.length == 0)
-			throw new SignaturePolicyException("Content signed is null");
+			throw new SignaturePolicyException(Messages.getString("error.contentSignedIsNull"));
 
 		X509Certificate certificate = null;
 		PublicKey publicKey = null;
@@ -125,7 +126,7 @@ public class ADRBCMS_1_0 implements SignaturePolicy {
 				signedData = new CMSSignedData(new CMSProcessableByteArray(content), contentSigned);
 			}
 		} catch (CMSException exception) {
-			throw new SignerException("Invalid bytes for a package PKCS7", exception);
+			throw new SignerException(Messages.getString("error.invalidBytesForPKCS7Package"), exception);
 		}
 
 		/*
@@ -157,7 +158,7 @@ public class ADRBCMS_1_0 implements SignaturePolicy {
 				throw new SignerException(exception);
 			}
 		} catch (SignerException exception) {
-			throw new SignerException("Error on get information about certificates and public keys from a package PKCS7", exception);
+			throw new SignerException(Messages.getString("error.errorOnGetInformationPKCS7"), exception);
 		}
 
 		/*
@@ -170,11 +171,11 @@ public class ADRBCMS_1_0 implements SignaturePolicy {
 		 */
 		org.bouncycastle.asn1.cms.Attribute attributeContentType = signedAttributesTable.get(CMSAttributes.contentType);
 		if (attributeContentType == null) {
-			throw new SignerException("Package PKCS7 without attribute ContentType");
+			throw new SignerException(Messages.getString("error.packagePKCS7WithoutAttributeContentType"));
 		}
 
 		if (!attributeContentType.getAttrValues().getObjectAt(0).equals(ContentInfo.data)) {
-			throw new SignerException("ContentType isn't a DATA type");
+			throw new SignerException(Messages.getString("error.contentTypeIsntDataType"));
 		}
 
 		/*
@@ -195,7 +196,7 @@ public class ADRBCMS_1_0 implements SignaturePolicy {
 		 */
 		org.bouncycastle.asn1.cms.Attribute attributeMessageDigest = signedAttributesTable.get(CMSAttributes.messageDigest);
 		if (attributeMessageDigest == null) {
-			throw new SignerException("Package PKCS7 without attribute MessageDigest");
+			throw new SignerException(Messages.getString("error.packagePKCS7WithoutAttributeMessageDigest"));
 		}
 		Object der = attributeMessageDigest.getAttrValues().getObjectAt(0).getDERObject();
 		ASN1OctetString octeto = ASN1OctetString.getInstance(der);
@@ -203,14 +204,14 @@ public class ADRBCMS_1_0 implements SignaturePolicy {
 
 		String algorithm = SignerAlgorithmEnum.getSignerOIDAlgorithmHashEnum(signerInformation.getDigestAlgorithmID().getObjectId().toString()).getAlgorithmHash();
 		if (!algorithm.equals(DigestAlgorithmEnum.SHA_1.getAlgorithm())) {
-			throw new SignerException("Algoritmo de resumo inválido para esta política");
+			throw new SignerException(Messages.getString("error.algoritmoDeResumoInvalidoParaPolitica"));
 		}
 
 		Digest digest = DigestFactory.getInstance().factoryDefault();
 		digest.setAlgorithm(DigestAlgorithmEnum.SHA_1.getAlgorithm());
 		byte[] hashContent = digest.digest(content);
 		if (!MessageDigest.isEqual(hashContentSigned, hashContent)) {
-			throw new SignerException("Hash not equal");
+			throw new SignerException(Messages.getString("error.hashNotEqual"));
 		}
 
 		try {
@@ -220,7 +221,7 @@ public class ADRBCMS_1_0 implements SignaturePolicy {
 		} catch (NoSuchProviderException e) {
 			throw new SignerException(e);
 		} catch (CMSException e) {
-			throw new SignerException("Invalid signature", e);
+			throw new SignerException(Messages.getString("error.invalidSignature"), e);
 		}
 
 		// Valida a cadeia de certificação de um arquivo assinado
@@ -234,7 +235,7 @@ public class ADRBCMS_1_0 implements SignaturePolicy {
 			DERUTCTime time = (DERUTCTime) derSet.getObjectAt(0);
 			dataSigner = time.getAdjustedDate();
 		} catch (Throwable error) {
-			throw new SignerException("SigningTime error", error);
+			throw new SignerException(Messages.getString("error.signingTimeError"), error);
 		}
 
 		// Para a versão 1.0, o período para assinatura desta PA é de 31/10/2008
@@ -248,13 +249,13 @@ public class ADRBCMS_1_0 implements SignaturePolicy {
 
 		if (dataSigner != null) {
 			if (dataSigner.before(firstDate)) {
-				throw new SignerException("Invalid signing time. Not valid before 10/31/2008");
+				throw new SignerException(Messages.getString("error.unvalidSigningTimeNotValidBefore", "10/31/2008"));
 			}
 			if (dataSigner.after(lastDate)) {
-				throw new SignerException("Invalid signing time. Not valid after 12/31/2014");
+				throw new SignerException(Messages.getString("error.invalidSigningTimeNotValidAfter", "12/31/2014"));
 			}
 		} else {
-			throw new SignerException("There is SigningTime attribute on Package PKCS7, but it is null");
+			throw new SignerException(Messages.getString("error.signingTimeIsNull"));
 		}
 	}
 
@@ -276,7 +277,7 @@ public class ADRBCMS_1_0 implements SignaturePolicy {
 		 */
 
 		if (((RSAPublicKey) certificate.getPublicKey()).getModulus().bitLength() < keySize)
-			throw new SignerException("O tamanho mínimo da chave privada deve ser de " + keySize + " bits");
+			throw new SignerException(Messages.getString("error.tamanhoMinimoChavePrivada", keySize));
 
 		/*
 		 * Assinaturas digitais geradas segundo esta Política de Assinatura

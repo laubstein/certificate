@@ -75,7 +75,7 @@ public class OID_2_16_76_1_3_4 extends OIDGeneric {
 
 	/**
 	 * 
-	 * @return numero do Cadastro de Pessoa Fisica (CPF) do titular;
+	 * @return número do Cadastro de Pessoa Fisica (CPF) do titular;
 	 */
 	public String getCPF() {
 		return properties.get("cpf");
@@ -83,7 +83,7 @@ public class OID_2_16_76_1_3_4 extends OIDGeneric {
 
 	/**
 	 * 
-	 * @return o numero de Identificacao Social - NIS (PIS, PASEP ou CI)
+	 * @return o número de Identificacao Social - NIS (PIS, PASEP ou CI)
 	 */
 	public String getNIS() {
 		return properties.get("nis");
@@ -91,7 +91,7 @@ public class OID_2_16_76_1_3_4 extends OIDGeneric {
 
 	/**
 	 * 
-	 * @return numero do Registro Geral - RG do titular
+	 * @return número do Registro Geral - RG do titular
 	 */
 	public String getRg() {
 		return properties.get("rg");

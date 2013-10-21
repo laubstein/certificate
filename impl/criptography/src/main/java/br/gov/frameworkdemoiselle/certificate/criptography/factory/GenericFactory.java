@@ -40,7 +40,7 @@ package br.gov.frameworkdemoiselle.certificate.criptography.factory;
 import br.gov.frameworkdemoiselle.certificate.criptography.configuration.Configuration;
 
 /**
- * Fabrica abstrata que concentra a leitura das configurações para as fábricas
+ * Fábrica abstrata que concentra a leitura das configurações para as fábricas
  * especializadas como também as funcionalidades de reflexão de classes.
  * 
  * @see {@link CriptographyFactory}, {@link DigestFactory}
@@ -51,12 +51,12 @@ public abstract class GenericFactory<F> {
 	private String className = null;
 
 	/**
-	 * Principal método da fábrica. Este metodo fabrica classes a partir de nome
-	 * de classes definidos em variaveis de ambiente. Tais variaveis são
+	 * Principal método da fábrica. Este método fabrica classes a partir de nome
+	 * de classes definidos em variáveis de ambiente. Tais variáveis são
 	 * definidas por cada fábrica concreta que implementar a fábrica abstrata
 	 * através do método getVariableName(). Uma vez lido a variável de ambiente,
-	 * o valor da variavel é armazenada na propriedade "className". Caso a
-	 * variável de ambiente não esteja setada, um objeto padrão é construido
+	 * o valor da variável é armazenada na propriedade "className". Caso a
+	 * variável de ambiente não esteja setada, um objeto padrão é construído
 	 * através do método abstrato factoryDefault().
 	 */
 	public F factory() {
@@ -105,7 +105,7 @@ public abstract class GenericFactory<F> {
 	public abstract F factoryDefault();
 
 	/**
-	 * Toda fábrica concreta precisa definir em qual variavel de ambiente contém
+	 * Toda fábrica concreta precisa definir em qual variável de ambiente contém
 	 * o nome da classe a ser fabricada
 	 */
 	protected abstract String getVariableName();
